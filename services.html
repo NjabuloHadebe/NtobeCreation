@@ -1,0 +1,743 @@
+<!-- Include header -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntobem Creations | Wedding Decor & Favours</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blush': '#F8C8DC',
+                        'blush-dark': '#E8B8CC',
+                        'gold': '#D4AF37',
+                        'grey': '#6B7280',
+                        'grey-light': '#F3F4F6',
+                        'grey-dark': '#4B5563'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .simple-nav {
+            background-color: rgba(255,255,255,0.95);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-grey-light">
+    <!-- Navigation -->
+    <nav class="simple-nav shadow-sm sticky top-0 z-50 py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-grey-dark">Ntobem Creations</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-grey-dark hover:text-blush">Home</a>
+                <a href="services.html" class="text-grey-dark hover:text-blush">Wedding Services</a>
+                <a href="shop.html" class="text-grey-dark hover:text-blush">Shop</a>
+                <a href="blog.html" class="text-grey-dark hover:text-blush">Blog</a>
+                <a href="contact.html" class="text-grey-dark hover:text-blush">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-grey-dark hover:text-blush">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <button class="md:hidden text-grey-dark" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-grey-dark hover:text-blush">Home</a>
+                <a href="about.html" class="text-grey-dark hover:text-blush">About</a>
+                <a href="services.html" class="text-grey-dark hover:text-blush">Wedding Services</a>
+                <a href="shop.html" class="text-grey-dark hover:text-blush">Shop</a>
+                <a href="blog.html" class="text-grey-dark hover:text-blush">Blog</a>
+                <a href="contact.html" class="text-grey-dark hover:text-blush">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $("body").prepend($("<div>").load("components/header.html"));
+    });
+</script>
+
+<!-- Include header -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $("body").prepend($("<div>").load("components/header.html"));
+    });
+</script>
+
+<!-- Services Hero -->
+<section class="relative h-64 bg-blush flex items-center">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Our Wedding Services</h1>
+        <p class="text-white">Comprehensive services to create your perfect day</p>
+    </div>
+</section>
+
+<!-- Services Tabs -->
+<section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex flex-wrap border-b border-grey-light mb-8">
+            <button class="tab-btn active px-6 py-3 font-medium text-grey-dark border-b-2 border-gold" data-tab="floral">Floral Styling</button>
+            <button class="tab-btn px-6 py-3 font-medium text-grey-dark hover:text-blush" data-tab="decor">Décor Styling</button>
+            <button class="tab-btn px-6 py-3 font-medium text-grey-dark hover:text-blush" data-tab="stationery">Stationery & Signage</button>
+            <button class="tab-btn px-6 py-3 font-medium text-grey-dark hover:text-blush" data-tab="coordination">On-The-Day Coordination</button>
+            <button class="tab-btn px-6 py-3 font-medium text-grey-dark hover:text-blush" data-tab="planning">Full Planning</button>
+        </div>
+
+        <!-- Floral Styling Tab Content -->
+        <div id="floral" class="tab-content active">
+            <div class="md:flex items-start gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-grey-dark mb-6">Floral Styling</h2>
+                    <p class="text-grey-dark mb-6">Our floral designs transform spaces into breathtaking environments. We work with seasonal blooms to create arrangements that complement your wedding theme and color palette.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Bridal Bouquets</h3>
+                            <p class="text-grey">Custom-designed bouquets using seasonal flowers to complement your wedding theme.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Ceremony Arrangements</h3>
+                            <p class="text-grey">Stunning floral arches, aisle markers, and altar arrangements.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Reception Centerpieces</h3>
+                            <p class="text-grey">Elegant table arrangements from minimalist to extravagant.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Flower Walls</h3>
+                            <p class="text-grey">Breathtaking floral backdrops for photo opportunities.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Boutonnieres & Corsages</h3>
+                            <p class="text-grey">Matching floral pieces for the wedding party.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Flower Crowns</h3>
+                            <p class="text-grey">Beautiful floral crowns for brides and flower girls.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-grey-dark mb-4">Pricing</h3>
+                    <p class="text-grey-dark mb-4">Floral packages start at R8,000. Final pricing depends on the types of flowers selected, quantity needed, and complexity of arrangements.</p>
+                    
+                    <div class="bg-grey-light p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold mb-2">What's Included:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Initial consultation to discuss your vision</li>
+                            <li>Custom floral design proposal</li>
+                            <li>Selection of seasonal flowers</li>
+                            <li>Delivery and setup of all arrangements</li>
+                            <li>Breakdown after the event</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3 bg-grey-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Featured Floral Work</h3>
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1523438885201-e6a8084e7dda?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Floral Arrangement" class="rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Bridal Bouquet" class="rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Flower Wall" class="rounded-lg">
+                    </div>
+                    <a href="contact.html" class="mt-6 inline-block w-full bg-gold text-white text-center py-2 rounded-lg hover:bg-opacity-90 transition">
+                        Inquire About Floral Services
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Décor Styling Tab Content -->
+        <div id="decor" class="tab-content hidden">
+            <div class="md:flex items-start gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-grey-dark mb-6">Décor Styling</h2>
+                    <p class="text-grey-dark mb-6">From ceremony to reception, we'll transform your venue with beautiful décor that reflects your personal style. Our team handles everything from furniture rentals to lighting design.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Table Settings</h3>
+                            <p class="text-grey">Complete tablescape design with linens, charger plates, and glassware.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Lighting Design</h3>
+                            <p class="text-grey">Ambient lighting with fairy lights, chandeliers, and custom installations.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Lounge Areas</h3>
+                            <p class="text-grey">Stylish lounge furniture arrangements for guest comfort.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Ceiling Installations</h3>
+                            <p class="text-grey">Dramatic overhead décor with fabric draping and hanging florals.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Ceremony Backdrops</h3>
+                            <p class="text-grey">Custom-designed structures for your ceremony altar.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Dance Floor Treatments</h3>
+                            <p class="text-grey">Custom monograms or designs for your dance floor.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-grey-dark mb-4">Pricing</h3>
+                    <p class="text-grey-dark mb-4">Décor packages start at R12,000. Final pricing depends on the size of your venue, rental items needed, and complexity of installations.</p>
+                    
+                    <div class="bg-grey-light p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold mb-2">What's Included:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Initial design consultation</li>
+                            <li>Custom décor proposal with renderings</li>
+                            <li>Coordination with rental companies</li>
+                            <li>Full setup of all décor elements</li>
+                            <li>Breakdown after the event</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3 bg-grey-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Featured Décor Work</h3>
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Table Setting" class="rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ceremony Backdrop" class="rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Lounge Area" class="rounded-lg">
+                    </div>
+                    <a href="contact.html" class="mt-6 inline-block w-full bg-gold text-white text-center py-2 rounded-lg hover:bg-opacity-90 transition">
+                        Inquire About Décor Services
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stationery & Signage Tab Content -->
+        <div id="stationery" class="tab-content hidden">
+            <div class="md:flex items-start gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-grey-dark mb-6">Stationery & Signage</h2>
+                    <p class="text-grey-dark mb-6">Beautiful paper goods and signage that set the tone for your wedding day. From invitations to thank you cards, we design cohesive stationery suites that match your wedding aesthetic.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Wedding Invitations</h3>
+                            <p class="text-grey">Custom-designed invitation suites with matching RSVP cards.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Acrylic Signage</h3>
+                            <p class="text-grey">Elegant clear acrylic signs for welcome messages and seating charts.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Place Cards & Menus</h3>
+                            <p class="text-grey">Personalized table stationery to guide your guests.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Programs</h3>
+                            <p class="text-grey">Beautifully designed ceremony programs.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Thank You Cards</h3>
+                            <p class="text-grey">Matching post-wedding stationery.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Custom Illustrations</h3>
+                            <p class="text-grey">Personalized illustrations for your stationery suite.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-grey-dark mb-4">Pricing</h3>
+                    <p class="text-grey-dark mb-4">Stationery packages start at R3,500. Final pricing depends on the complexity of design, printing methods, and quantity needed.</p>
+                    
+                    <div class="bg-grey-light p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold mb-2">What's Included:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Initial design consultation</li>
+                            <li>3 rounds of revisions</li>
+                            <li>Digital proofs of all items</li>
+                            <li>High-quality printing</li>
+                            <li>Optional assembly services</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3 bg-grey-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Featured Stationery</h3>
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Wedding Invitation" class="rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Place Cards" class="rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Acrylic Sign" class="rounded-lg">
+                    </div>
+                    <a href="contact.html" class="mt-6 inline-block w-full bg-gold text-white text-center py-2 rounded-lg hover:bg-opacity-90 transition">
+                        Inquire About Stationery
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- On-The-Day Coordination Tab Content -->
+        <div id="coordination" class="tab-content hidden">
+            <div class="md:flex items-start gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-grey-dark mb-6">On-The-Day Coordination</h2>
+                    <p class="text-grey-dark mb-6">Let us handle the logistics so you can enjoy every moment of your wedding day. Our coordination team will ensure everything runs smoothly according to your planned timeline.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Vendor Management</h3>
+                            <p class="text-grey">Coordination of all vendors for seamless setup.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Timeline Execution</h3>
+                            <p class="text-grey">Oversight of your wedding timeline.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Ceremony Coordination</h3>
+                            <p class="text-grey">Organization of processional order and cues.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Reception Management</h3>
+                            <p class="text-grey">Supervision of reception events.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Emergency Kit</h3>
+                            <p class="text-grey">Comprehensive kit with sewing supplies and more.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Guest Assistance</h3>
+                            <p class="text-grey">Point person for guest questions and needs.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-grey-dark mb-4">Pricing</h3>
+                    <p class="text-grey-dark mb-4">Coordination services start at R6,500. Includes one lead coordinator and one assistant for weddings up to 150 guests.</p>
+                    
+                    <div class="bg-grey-light p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold mb-2">What's Included:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Pre-wedding venue walkthrough</li>
+                            <li>Final confirmation with all vendors</li>
+                            <li>Creation of detailed timeline</li>
+                            <li>Full-day coordination (up to 10 hours)</li>
+                            <li>Emergency kit with essentials</li>
+                            <li>Assistance with guest management</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3 bg-grey-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Coordination Process</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="bg-blush text-grey-dark w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">1</div>
+                            <p>Initial consultation 6-8 weeks before wedding</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blush text-grey-dark w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">2</div>
+                            <p>Review all vendor contracts and details</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blush text-grey-dark w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">3</div>
+                            <p>Create detailed timeline for the day</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blush text-grey-dark w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">4</div>
+                            <p>Venue walkthrough 2 weeks prior</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blush text-grey-dark w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">5</div>
+                            <p>Coordinate all vendors on wedding day</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="mt-6 inline-block w-full bg-gold text-white text-center py-2 rounded-lg hover:bg-opacity-90 transition">
+                        Inquire About Coordination
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Planning Tab Content -->
+        <div id="planning" class="tab-content hidden">
+            <div class="md:flex items-start gap-8">
+                <div class="md:w-2/3">
+                    <h2 class="text-3xl font-bold text-grey-dark mb-6">Full Planning Services</h2>
+                    <p class="text-grey-dark mb-6">For couples who want comprehensive support from the very beginning. We'll handle every detail from venue selection to the final send-off, creating a wedding that perfectly reflects your vision.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Vision Development</h3>
+                            <p class="text-grey">Define your wedding style and theme.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Vendor Selection</h3>
+                            <p class="text-grey">Curated recommendations for your budget.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Budget Management</h3>
+                            <p class="text-grey">Detailed planning to maximize investment.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Design Development</h3>
+                            <p class="text-grey">Mood boards and detailed décor plans.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">Month-of Coordination</h3>
+                            <p class="text-grey">Complete oversight of final details.</p>
+                        </div>
+                        <div class="border-l-4 border-gold pl-4">
+                            <h3 class="font-semibold text-lg mb-2">RSVP Management</h3>
+                            <p class="text-grey">Track guest responses and meal choices.</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-semibold text-grey-dark mb-4">Pricing</h3>
+                    <p class="text-grey-dark mb-4">Full planning services start at R25,000. Pricing is customized based on wedding size, complexity, and services required.</p>
+                    
+                    <div class="bg-grey-light p-4 rounded-lg mb-6">
+                        <h4 class="font-semibold mb-2">What's Included:</h4>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Unlimited planning consultations</li>
+                            <li>Venue search and selection</li>
+                            <li>Vendor recommendations and booking</li>
+                            <li>Budget creation and management</li>
+                            <li>Design concept development</li>
+                            <li>Timeline creation and management</li>
+                            <li>Full coordination services</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/3 bg-grey-light p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Planning Timeline</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-blush-dark">12-18 Months Before</h4>
+                            <ul class="list-disc pl-5 text-sm space-y-1 mt-1">
+                                <li>Vision development</li>
+                                <li>Budget planning</li>
+                                <li>Venue selection</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blush-dark">9-12 Months Before</h4>
+                            <ul class="list-disc pl-5 text-sm space-y-1 mt-1">
+                                <li>Vendor bookings</li>
+                                <li>Design concepts</li>
+                                <li>Stationery design</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blush-dark">6-9 Months Before</h4>
+                            <ul class="list-disc pl-5 text-sm space-y-1 mt-1">
+                                <li>Dress selection</li>
+                                <li>Menu planning</li>
+                                <li>Hotel blocks</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blush-dark">3-6 Months Before</h4>
+                            <ul class="list-disc pl-5 text-sm space-y-1 mt-1">
+                                <li>Final vendor confirmations</li>
+                                <li>Seating arrangements</li>
+                                <li>Final fittings</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-blush-dark">1 Month Before</h4>
+                            <ul class="list-disc pl-5 text-sm space-y-1 mt-1">
+                                <li>Final walkthrough</li>
+                                <li>Timeline distribution</li>
+                                <li>Final payments</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="mt-6 inline-block w-full bg-gold text-white text-center py-2 rounded-lg hover:bg-opacity-90 transition">
+                        Inquire About Planning
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Packages Section -->
+<section class="py-16 bg-grey-light">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-grey-dark mb-12">Service Packages</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+                <h3 class="text-2xl font-semibold mb-4">Essentials</h3>
+                <p class="text-gold text-xl font-medium mb-6">From R15,000</p>
+                <ul class="space-y-3 mb-8 text-left">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Floral styling for ceremony & reception</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Basic décor elements</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Invitation design</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>2 planning meetings</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="inline-block border-2 border-gold text-grey-dark px-6 py-2 rounded-lg hover:bg-blush transition">
+                    Get Started
+                </a>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center relative">
+                <div class="absolute top-0 right-0 bg-gold text-white px-3 py-1 text-sm font-medium rounded-bl-lg">Most Popular</div>
+                <h3 class="text-2xl font-semibold mb-4">Signature</h3>
+                <p class="text-gold text-xl font-medium mb-6">From R30,000</p>
+                <ul class="space-y-3 mb-8 text-left">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Full floral styling</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Complete décor design</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Full stationery suite</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>On-the-day coordination</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>6 planning meetings</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="inline-block bg-gold text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition">
+                    Get Started
+                </a>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+                <h3 class="text-2xl font-semibold mb-4">Platinum</h3>
+                <p class="text-gold text-xl font-medium mb-6">From R50,000</p>
+                <ul class="space-y-3 mb-8 text-left">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Full planning services</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Luxury floral designs</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Premium décor elements</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Custom illustrations</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-gold mt-1 mr-2"></i>
+                        <span>Unlimited planning meetings</span>
+                    </li>
+                </ul>
+                <a href="contact.html" class="inline-block border-2 border-gold text-grey-dark px-6 py-2 rounded-lg hover:bg-blush transition">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-grey-dark mb-12">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+            <div class="border border-grey-light rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-4 text-left hover:bg-grey-light transition">
+                    <span class="font-medium">How far in advance should we book your services?</span>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-content hidden px-4 pb-4">
+                    <p class="text-grey">We recommend booking as soon as you have your date secured, especially for peak season weddings (October-April). For full planning services, 12-18 months in advance is ideal. For floral and décor services, we require a minimum of 6 months notice, though we can sometimes accommodate last-minute weddings depending on availability.</p>
+                </div>
+            </div>
+            
+            <div class="border border-grey-light rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-4 text-left hover:bg-grey-light transition">
+                    <span class="font-medium">Do you work with specific venues or can we choose our own?</span>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-content hidden px-4 pb-4">
+                    <p class="text-grey">We're happy to work at any venue of your choice! If you need recommendations, we have relationships with many wonderful venues across South Africa and can help you find the perfect location that fits your style and budget.</p>
+                </div>
+            </div>
+            
+            <div class="border border-grey-light rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-4 text-left hover:bg-grey-light transition">
+                    <span class="font-medium">Can we customize one of your packages?</span>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-content hidden px-4 pb-4">
+                    <p class="text-grey">Absolutely! Our packages are designed to be flexible. We'll work with you to create a custom package that includes exactly what you need, nothing more, nothing less.</p>
+                </div>
+            </div>
+            
+            <div class="border border-grey-light rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-4 text-left hover:bg-grey-light transition">
+                    <span class="font-medium">What's your payment schedule?</span>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-content hidden px-4 pb-4">
+                    <p class="text-grey">We require a 30% deposit to secure your date, with the remaining balance divided into payments leading up to your wedding. Final payment is due 2 weeks before your event. We accept bank transfers and credit cards.</p>
+                </div>
+            </div>
+            
+            <div class="border border-grey-light rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-4 text-left hover:bg-grey-light transition">
+                    <span class="font-medium">Do you handle destination weddings?</span>
+                    <i class="fas fa-chevron-down transition-transform"></i>
+                </button>
+                <div class="faq-content hidden px-4 pb-4">
+                    <p class="text-grey">Yes! We've planned beautiful weddings across South Africa and internationally. Additional travel fees may apply depending on location.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-blush">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Discuss Your Wedding?</h2>
+        <p class="text-white mb-8 text-xl">Schedule a free consultation to discuss your vision and how we can help bring it to life</p>
+        <a href="contact.html" class="inline-block bg-white text-blush px-8 py-3 rounded-lg font-medium hover:bg-opacity-90 transition">
+            Book a Consultation
+        </a>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-grey-dark text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gold">Ntobem Creations</h3>
+                    <p class="text-grey-light mb-4">Creating unforgettable weddings with exquisite details and personalized service.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-grey-light hover:text-gold transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ntobem_creations" target="_blank" class="text-grey-light hover:text-gold transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-grey-light hover:text-gold transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-grey-light hover:text-white transition">Home</a></li>
+                        <li><a href="services.html" class="text-grey-light hover:text-white transition">Services</a></li>
+                        <li><a href="shop.html" class="text-grey-light hover:text-white transition">Shop</a></li>
+                        <li><a href="contact.html" class="text-grey-light hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Shop Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Favours</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Stationery</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Signage</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Accessories</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-gold mt-1 mr-2"></i>
+                            <span class="text-grey-light">+27 12 345 6789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-gold mt-1 mr-2"></i>
+                            <span class="text-grey-light">info@ntobemcreations.co.za</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-grey pt-8 mt-8 text-center text-grey-light">
+                <p>&copy; 2023 Ntobem Creations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    $(function(){
+        $("body").append($("<div>").load("components/footer.html"));
+    });
+</script>
+
+<!-- Tab Functionality -->
+<script>
+    // Tab functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons and contents
+            tabBtns.forEach(btn => btn.classList.remove('active', 'border-b-2', 'border-gold'));
+            tabContents.forEach(content => content.classList.add('hidden'));
+            
+            // Add active class to clicked button
+            btn.classList.add('active', 'border-b-2', 'border-gold');
+            
+            // Show corresponding content
+            const tabId = btn.getAttribute('data-tab');
+            document.getElementById(tabId).classList.remove('hidden');
+        });
+    });
+    
+    // FAQ functionality
+    const faqBtns = document.querySelectorAll('.faq-btn');
+    
+    faqBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('transform');
+            icon.classList.toggle('rotate-180');
+        });
+    });
+</script>

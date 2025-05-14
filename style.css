@@ -1,0 +1,39 @@
+/* Custom styles that complement Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.simple-nav {
+    background-color: rgba(255,255,255,0.95);
+    backdrop-filter: blur(5px);
+}
+
+/* Tab styles */
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* FAQ accordion */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.faq-content.active {
+    max-height: 500px;
+}
+
+/* Mobile menu */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+#mobile-menu.active {
+    max-height: 500px;
+}

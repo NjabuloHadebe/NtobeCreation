@@ -1,0 +1,393 @@
+<!-- Include header -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntobem Creations | Wedding Decor & Favours</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blush': '#F8C8DC',
+                        'blush-dark': '#E8B8CC',
+                        'gold': '#D4AF37',
+                        'grey': '#6B7280',
+                        'grey-light': '#F3F4F6',
+                        'grey-dark': '#4B5563'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .simple-nav {
+            background-color: rgba(255,255,255,0.95);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-grey-light">
+    <!-- Navigation -->
+    <nav class="simple-nav shadow-sm sticky top-0 z-50 py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-grey-dark">Ntobem Creations</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-grey-dark hover:text-blush">Home</a>
+                <a href="services.html" class="text-grey-dark hover:text-blush">Wedding Services</a>
+                <a href="shop.html" class="text-grey-dark hover:text-blush">Shop</a>
+                <a href="blog.html" class="text-grey-dark hover:text-blush">Blog</a>
+                <a href="contact.html" class="text-grey-dark hover:text-blush">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-grey-dark hover:text-blush">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <button class="md:hidden text-grey-dark" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-grey-dark hover:text-blush">Home</a>
+                <a href="about.html" class="text-grey-dark hover:text-blush">About</a>
+                <a href="services.html" class="text-grey-dark hover:text-blush">Wedding Services</a>
+                <a href="shop.html" class="text-grey-dark hover:text-blush">Shop</a>
+                <a href="blog.html" class="text-grey-dark hover:text-blush">Blog</a>
+                <a href="contact.html" class="text-grey-dark hover:text-blush">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $("body").prepend($("<div>").load("components/header.html"));
+    });
+</script>
+
+<!-- Include header -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $("body").prepend($("<div>").load("components/header.html"));
+    });
+</script>
+
+<!-- Blog Hero -->
+<section class="relative h-64 bg-blush flex items-center">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Wedding Inspiration & Advice</h1>
+        <p class="text-white">Tips, trends and real weddings to inspire your planning</p>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="md:flex gap-8">
+            <!-- Main Content -->
+            <div class="md:w-2/3">
+                <h2 class="text-2xl font-bold mb-8">Latest Posts</h2>
+                
+                <!-- Featured Post -->
+                <div class="mb-12">
+                    <div class="relative rounded-lg overflow-hidden mb-4">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Wedding Planning" class="w-full h-96 object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6">
+                            <span class="inline-block bg-gold text-white px-3 py-1 text-sm rounded-full mb-2">Planning Tips</span>
+                            <h3 class="text-2xl font-bold text-white">The Ultimate Wedding Planning Timeline</h3>
+                        </div>
+                    </div>
+                    <p class="text-grey-dark mb-4">Planning a wedding can feel overwhelming, but our comprehensive timeline breaks down everything you need to do from 12 months out to the big day itself.</p>
+                    <div class="flex items-center text-grey text-sm">
+                        <span>June 15, 2023</span>
+                        <span class="mx-2">•</span>
+                        <span>8 min read</span>
+                    </div>
+                    <a href="#" class="inline-block mt-4 text-gold font-medium hover:underline">Read More →</a>
+                </div>
+                
+                <!-- Blog Post Grid -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Post 1 -->
+                    <div class="border border-grey-light rounded-lg overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1523438885201-e6a8084e7dda?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Floral Trends" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span class="inline-block bg-blush text-grey-dark px-2 py-1 text-xs rounded-full mb-2">Floral Trends</span>
+                            <h3 class="font-bold text-lg mb-2">2023 Wedding Flower Trends</h3>
+                            <p class="text-grey-dark text-sm mb-3">Discover the most popular floral styles and color palettes for weddings this year.</p>
+                            <div class="flex items-center text-grey text-xs">
+                                <span>May 28, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 2 -->
+                    <div class="border border-grey-light rounded-lg overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Budget Tips" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span class="inline-block bg-blush text-grey-dark px-2 py-1 text-xs rounded-full mb-2">Budget Tips</span>
+                            <h3 class="font-bold text-lg mb-2">10 Ways to Save on Your Wedding</h3>
+                            <p class="text-grey-dark text-sm mb-3">Smart strategies to create your dream wedding without breaking the bank.</p>
+                            <div class="flex items-center text-grey text-xs">
+                                <span>May 15, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 3 -->
+                    <div class="border border-grey-light rounded-lg overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Real Wedding" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span class="inline-block bg-blush text-grey-dark px-2 py-1 text-xs rounded-full mb-2">Real Wedding</span>
+                            <h3 class="font-bold text-lg mb-2">Nomsa & Thabo's Garden Wedding</h3>
+                            <p class="text-grey-dark text-sm mb-3">A romantic outdoor celebration with personal touches and stunning details.</p>
+                            <div class="flex items-center text-grey text-xs">
+                                <span>April 30, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 4 -->
+                    <div class="border border-grey-light rounded-lg overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="DIY Projects" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span class="inline-block bg-blush text-grey-dark px-2 py-1 text-xs rounded-full mb-2">DIY Projects</span>
+                            <h3 class="font-bold text-lg mb-2">Easy Wedding DIYs You Can Actually Do</h3>
+                            <p class="text-grey-dark text-sm mb-3">Simple projects to personalize your wedding without the stress.</p>
+                            <div class="flex items-center text-grey text-xs">
+                                <span>April 18, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>4 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 5 -->
+                    <div class="border border-grey-light rounded-lg overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Venues" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span class="inline-block bg-blush text-grey-dark px-2 py-1 text-xs rounded-full mb-2">Venues</span>
+                            <h3 class="font-bold text-lg mb-2">Top Wedding Venues in Johannesburg</h3>
+                            <p class="text-grey-dark text-sm mb-3">Our favorite locations for every style and budget in the city.</p>
+                            <div class="flex items-center text-grey text-xs">
+                                <span>April 5, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>9 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 6 -->
+                    <div class="border border-grey-light rounded-lg overflow-hidden hover:shadow-md transition">
+                        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Stationery" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <span class="inline-block bg-blush text-grey-dark px-2 py-1 text-xs rounded-full mb-2">Stationery</span>
+                            <h3 class="font-bold text-lg mb-2">How to Design Your Wedding Invitations</h3>
+                            <p class="text-grey-dark text-sm mb-3">Everything you need to know about creating the perfect invitation suite.</p>
+                            <div class="flex items-center text-grey text-xs">
+                                <span>March 22, 2023</span>
+                                <span class="mx-2">•</span>
+                                <span>5 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12">
+                    <nav class="flex items-center space-x-2">
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">
+                            <i class="fas fa-chevron-left text-grey-dark"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full bg-gold text-white flex items-center justify-center">1</button>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">2</button>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">3</button>
+                        <span class="px-2">...</span>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">8</button>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">
+                            <i class="fas fa-chevron-right text-grey-dark"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="md:w-1/3 mt-8 md:mt-0">
+                <div class="bg-grey-light p-6 rounded-lg sticky top-24">
+                    <!-- About Widget -->
+                    <div class="mb-8">
+                        <h3 class="font-semibold text-lg mb-4">About the Blog</h3>
+                        <p class="text-grey-dark text-sm mb-4">Welcome to the Ntobem Creations blog! Here we share wedding inspiration, planning tips, and behind-the-scenes looks at our work.</p>
+                        <a href="about.html" class="text-gold text-sm font-medium hover:underline">Learn more about us →</a>
+                    </div>
+                    
+                    <!-- Categories Widget -->
+                    <div class="mb-8">
+                        <h3 class="font-semibold text-lg mb-4">Categories</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-grey-dark hover:text-blush">Planning Tips</a></li>
+                            <li><a href="#" class="text-grey-dark hover:text-blush">Real Weddings</a></li>
+                            <li><a href="#" class="text-grey-dark hover:text-blush">Floral Trends</a></li>
+                            <li><a href="#" class="text-grey-dark hover:text-blush">Décor Ideas</a></li>
+                            <li><a href="#" class="text-grey-dark hover:text-blush">Budget Tips</a></li>
+                            <li><a href="#" class="text-grey-dark hover:text-blush">DIY Projects</a></li>
+                            <li><a href="#" class="text-grey-dark hover:text-blush">Vendor Spotlights</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Popular Posts Widget -->
+                    <div class="mb-8">
+                        <h3 class="font-semibold text-lg mb-4">Popular Posts</h3>
+                        <div class="space-y-4">
+                            <a href="#" class="flex items-start group">
+                                <img src="https://images.unsplash.com/photo-1523438885201-e6a8084e7dda?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" alt="Post thumbnail" class="w-16 h-16 object-cover rounded mr-3">
+                                <div>
+                                    <h4 class="font-medium text-sm group-hover:text-blush">2023 Wedding Flower Trends</h4>
+                                    <p class="text-grey text-xs">May 28, 2023</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" alt="Post thumbnail" class="w-16 h-16 object-cover rounded mr-3">
+                                <div>
+                                    <h4 class="font-medium text-sm group-hover:text-blush">Nomsa & Thabo's Garden Wedding</h4>
+                                    <p class="text-grey text-xs">April 30, 2023</p>
+                                </div>
+                            </a>
+                            <a href="#" class="flex items-start group">
+                                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=60" alt="Post thumbnail" class="w-16 h-16 object-cover rounded mr-3">
+                                <div>
+                                    <h4 class="font-medium text-sm group-hover:text-blush">10 Ways to Save on Your Wedding</h4>
+                                    <p class="text-grey text-xs">May 15, 2023</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter Widget -->
+                    <div>
+                        <h3 class="font-semibold text-lg mb-4">Wedding Inspiration Newsletter</h3>
+                        <p class="text-grey-dark text-sm mb-4">Get monthly wedding inspiration, planning tips, and exclusive offers straight to your inbox.</p>
+                        <form class="space-y-3">
+                            <input type="text" placeholder="Your Name" class="w-full px-3 py-2 border border-grey-light rounded focus:outline-none focus:ring-1 focus:ring-gold">
+                            <input type="email" placeholder="Your Email" class="w-full px-3 py-2 border border-grey-light rounded focus:outline-none focus:ring-1 focus:ring-gold">
+                            <button type="submit" class="w-full bg-gold text-white py-2 rounded-lg hover:bg-opacity-90 transition">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Instagram Feed -->
+<section class="py-16 bg-blush">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">Follow Us on Instagram</h2>
+        <p class="text-white mb-8 max-w-2xl mx-auto">See more of our work and get daily wedding inspiration</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 mb-8">
+            <a href="#" class="block overflow-hidden rounded-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Instagram post" class="w-full h-40 object-cover">
+            </a>
+            <a href="#" class="block overflow-hidden rounded-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1523438885201-e6a8084e7dda?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Instagram post" class="w-full h-40 object-cover">
+            </a>
+            <a href="#" class="block overflow-hidden rounded-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Instagram post" class="w-full h-40 object-cover">
+            </a>
+            <a href="#" class="block overflow-hidden rounded-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Instagram post" class="w-full h-40 object-cover">
+            </a>
+            <a href="#" class="block overflow-hidden rounded-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Instagram post" class="w-full h-40 object-cover">
+            </a>
+            <a href="#" class="block overflow-hidden rounded-lg hover:opacity-90 transition">
+                <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Instagram post" class="w-full h-40 object-cover">
+            </a>
+        </div>
+        
+        <a href="https://www.instagram.com/ntobem_creations" target="_blank" class="inline-block bg-white text-blush px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition">
+            <i class="fab fa-instagram mr-2"></i> @ntobem_creations
+        </a>
+    </div>
+</section>
+
+<!-- Include footer -->
+    <!-- Footer -->
+    <footer class="bg-grey-dark text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gold">Ntobem Creations</h3>
+                    <p class="text-grey-light mb-4">Creating unforgettable weddings with exquisite details and personalized service.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-grey-light hover:text-gold transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ntobem_creations" target="_blank" class="text-grey-light hover:text-gold transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-grey-light hover:text-gold transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-grey-light hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-grey-light hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-grey-light hover:text-white transition">Services</a></li>
+                        <li><a href="shop.html" class="text-grey-light hover:text-white transition">Shop</a></li>
+                        <li><a href="contact.html" class="text-grey-light hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Shop Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Favours</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Stationery</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Signage</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Accessories</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-gold mt-1 mr-2"></i>
+                            <span class="text-grey-light">+27 12 345 6789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-gold mt-1 mr-2"></i>
+                            <span class="text-grey-light">info@ntobemcreations.co.za</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-grey pt-8 mt-8 text-center text-grey-light">
+                <p>&copy; 2023 Ntobem Creations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

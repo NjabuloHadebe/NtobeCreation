@@ -1,0 +1,496 @@
+<!-- Include header -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ntobem Creations | Wedding Decor & Favours</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'blush': '#F8C8DC',
+                        'blush-dark': '#E8B8CC',
+                        'gold': '#D4AF37',
+                        'grey': '#6B7280',
+                        'grey-light': '#F3F4F6',
+                        'grey-dark': '#4B5563'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .simple-nav {
+            background-color: rgba(255,255,255,0.95);
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="font-sans bg-grey-light">
+    <!-- Navigation -->
+    <nav class="simple-nav shadow-sm sticky top-0 z-50 py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-grey-dark">Ntobem Creations</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-grey-dark hover:text-blush">Home</a>
+                <a href="services.html" class="text-grey-dark hover:text-blush">Wedding Services</a>
+                <a href="shop.html" class="text-grey-dark hover:text-blush">Shop</a>
+                <a href="blog.html" class="text-grey-dark hover:text-blush">Blog</a>
+                <a href="contact.html" class="text-grey-dark hover:text-blush">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-grey-dark hover:text-blush">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <button class="md:hidden text-grey-dark" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-grey-dark hover:text-blush">Home</a>
+                <a href="about.html" class="text-grey-dark hover:text-blush">About</a>
+                <a href="services.html" class="text-grey-dark hover:text-blush">Wedding Services</a>
+                <a href="shop.html" class="text-grey-dark hover:text-blush">Shop</a>
+                <a href="blog.html" class="text-grey-dark hover:text-blush">Blog</a>
+                <a href="contact.html" class="text-grey-dark hover:text-blush">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $("body").prepend($("<div>").load("components/header.html"));
+    });
+</script>
+
+<!-- Include header -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $("body").prepend($("<div>").load("components/header.html"));
+    });
+</script>
+
+<!-- Shop Hero -->
+<section class="relative h-64 bg-blush flex items-center">
+    <div class="absolute inset-0 bg-black opacity-20"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold text-white mb-4">Our Wedding Shop</h1>
+        <p class="text-white">Beautiful details for your special day</p>
+    </div>
+</section>
+
+<!-- Shop Content -->
+<section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="md:flex gap-8">
+            <!-- Sidebar Filters -->
+            <div class="md:w-1/4 mb-8 md:mb-0">
+                <div class="bg-grey-light p-6 rounded-lg sticky top-24">
+                    <h3 class="font-semibold text-lg mb-4">Shop Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-grey-dark hover:text-blush">All Products</a></li>
+                        <li><a href="#" class="text-grey-dark hover:text-blush">Wedding Favors</a></li>
+                        <li><a href="#" class="text-grey-dark hover:text-blush">Invitations</a></li>
+                        <li><a href="#" class="text-grey-dark hover:text-blush">Place Cards</a></li>
+                        <li><a href="#" class="text-grey-dark hover:text-blush">Table Numbers</a></li>
+                        <li><a href="#" class="text-grey-dark hover:text-blush">Signage</a></li>
+                        <li><a href="#" class="text-grey-dark hover:text-blush">Ceremony Items</a></li>
+                        <li><a href="#" class="text-grey-dark hover:text-blush">Gift Cards</a></li>
+                    </ul>
+                    
+                    <h3 class="font-semibold text-lg mt-8 mb-4">Filter By</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-medium mb-2">Price</h4>
+                            <div class="flex items-center space-x-4">
+                                <input type="number" placeholder="Min" class="w-full px-3 py-1 border border-grey-light rounded">
+                                <span>to</span>
+                                <input type="number" placeholder="Max" class="w-full px-3 py-1 border border-grey-light rounded">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium mb-2">Color</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="w-6 h-6 rounded-full bg-white border border-grey-light"></button>
+                                <button class="w-6 h-6 rounded-full bg-blush"></button>
+                                <button class="w-6 h-6 rounded-full bg-gold"></button>
+                                <button class="w-6 h-6 rounded-full bg-grey-dark"></button>
+                                <button class="w-6 h-6 rounded-full bg-black"></button>
+                                <button class="w-6 h-6 rounded-full bg-blue-200"></button>
+                                <button class="w-6 h-6 rounded-full bg-green-200"></button>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium mb-2">Material</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2">
+                                    <span>Acrylic</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2">
+                                    <span>Paper</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2">
+                                    <span>Wood</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="mr-2">
+                                    <span>Fabric</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="mt-6 w-full bg-gold text-white py-2 rounded-lg hover:bg-opacity-90 transition">
+                        Apply Filters
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product Grid -->
+            <div class="md:w-3/4">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-2xl font-bold">All Products</h2>
+                    <div class="flex items-center">
+                        <span class="mr-2">Sort by:</span>
+                        <select class="border border-grey-light rounded px-3 py-1">
+                            <option>Featured</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                            <option>Newest</option>
+                            <option>Best Selling</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Product 1 -->
+                    <div class="bg-grey-light rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1523438885201-e6a8084e7dda?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Personalized Wedding Favors" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-sm">
+                                <i class="far fa-heart text-grey-dark hover:text-blush cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold">Personalized Wedding Favors</h3>
+                            <p class="text-gold font-medium mt-1">R150.00</p>
+                            <div class="flex items-center mt-2 mb-3">
+                                <div class="text-gold text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-grey text-sm ml-1">(24)</span>
+                            </div>
+                            <button class="w-full bg-blush text-grey-dark py-2 rounded hover:bg-blush-dark transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="bg-grey-light rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Elegant Place Cards" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-sm">
+                                <i class="far fa-heart text-grey-dark hover:text-blush cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold">Elegant Place Cards</h3>
+                            <p class="text-gold font-medium mt-1">R80.00 <span class="text-grey text-sm">(set of 10)</span></p>
+                            <div class="flex items-center mt-2 mb-3">
+                                <div class="text-gold text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-grey text-sm ml-1">(18)</span>
+                            </div>
+                            <button class="w-full bg-blush text-grey-dark py-2 rounded hover:bg-blush-dark transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="bg-grey-light rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Custom Invitations" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-sm">
+                                <i class="far fa-heart text-grey-dark hover:text-blush cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold">Custom Invitations</h3>
+                            <p class="text-gold font-medium mt-1">R250.00 <span class="text-grey text-sm">(set of 10)</span></p>
+                            <div class="flex items-center mt-2 mb-3">
+                                <div class="text-gold text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-grey text-sm ml-1">(32)</span>
+                            </div>
+                            <button class="w-full bg-blush text-grey-dark py-2 rounded hover:bg-blush-dark transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="bg-grey-light rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Acrylic Table Numbers" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-sm">
+                                <i class="far fa-heart text-grey-dark hover:text-blush cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold">Acrylic Table Numbers</h3>
+                            <p class="text-gold font-medium mt-1">R120.00 <span class="text-grey text-sm">(set of 10)</span></p>
+                            <div class="flex items-center mt-2 mb-3">
+                                <div class="text-gold text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-grey text-sm ml-1">(21)</span>
+                            </div>
+                            <button class="w-full bg-blush text-grey-dark py-2 rounded hover:bg-blush-dark transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 5 -->
+                    <div class="bg-grey-light rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Welcome Sign" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-sm">
+                                <i class="far fa-heart text-grey-dark hover:text-blush cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold">Acrylic Welcome Sign</h3>
+                            <p class="text-gold font-medium mt-1">R450.00</p>
+                            <div class="flex items-center mt-2 mb-3">
+                                <div class="text-gold text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <span class="text-grey text-sm ml-1">(15)</span>
+                            </div>
+                            <button class="w-full bg-blush text-grey-dark py-2 rounded hover:bg-blush-dark transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 6 -->
+                    <div class="bg-grey-light rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Ring Bearer Pillow" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-sm">
+                                <i class="far fa-heart text-grey-dark hover:text-blush cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="font-semibold">Velvet Ring Bearer Pillow</h3>
+                            <p class="text-gold font-medium mt-1">R280.00</p>
+                            <div class="flex items-center mt-2 mb-3">
+                                <div class="text-gold text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="text-grey text-sm ml-1">(29)</span>
+                            </div>
+                            <button class="w-full bg-blush text-grey-dark py-2 rounded hover:bg-blush-dark transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="flex justify-center mt-12">
+                    <nav class="flex items-center space-x-2">
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">
+                            <i class="fas fa-chevron-left text-grey-dark"></i>
+                        </button>
+                        <button class="w-10 h-10 rounded-full bg-gold text-white flex items-center justify-center">1</button>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">2</button>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">3</button>
+                        <span class="px-2">...</span>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">8</button>
+                        <button class="w-10 h-10 rounded-full border border-grey-light flex items-center justify-center hover:bg-blush transition">
+                            <i class="fas fa-chevron-right text-grey-dark"></i>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Collection -->
+<section class="py-16 bg-blush">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-white mb-12">Featured Collection</h2>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Place Cards" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold">Blush & Gold Collection</h3>
+                    <p class="text-grey mt-1">Elegant stationery suite</p>
+                    <a href="#" class="inline-block mt-3 text-gold hover:underline">View Collection →</a>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Table Numbers" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold">Modern Minimalist</h3>
+                    <p class="text-grey mt-1">Clean acrylic designs</p>
+                    <a href="#" class="inline-block mt-3 text-gold hover:underline">View Collection →</a>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Favors" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold">Personalized Favors</h3>
+                    <p class="text-grey mt-1">Memorable guest gifts</p>
+                    <a href="#" class="inline-block mt-3 text-gold hover:underline">View Collection →</a>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Invitations" class="w-full h-48 object-cover">
+                <div class="p-4 text-center">
+                    <h3 class="font-semibold">Luxe Invitation Suite</h3>
+                    <p class="text-grey mt-1">Premium paper goods</p>
+                    <a href="#" class="inline-block mt-3 text-gold hover:underline">View Collection →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-grey-dark mb-8">What Couples Say About Our Products</h2>
+        
+        <div class="bg-grey-light p-8 rounded-lg mb-8">
+            <div class="flex justify-center mb-4">
+                <div class="text-gold">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <p class="text-grey-dark italic mb-6">"The acrylic table numbers we ordered were even more beautiful in person! They added such an elegant touch to our reception tables. The quality was outstanding and they arrived perfectly packaged."</p>
+            <p class="font-semibold">- Thandi & Sipho</p>
+        </div>
+        
+        <a href="#" class="inline-block border-2 border-gold text-grey-dark px-6 py-2 rounded-lg hover:bg-blush transition">
+            Read More Reviews
+        </a>
+    </div>
+</section>
+
+<!-- Include footer -->
+    <!-- Footer -->
+    <footer class="bg-grey-dark text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-gold">Ntobem Creations</h3>
+                    <p class="text-grey-light mb-4">Creating unforgettable weddings with exquisite details and personalized service.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-grey-light hover:text-gold transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/ntobem_creations" target="_blank" class="text-grey-light hover:text-gold transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-grey-light hover:text-gold transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-grey-light hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-grey-light hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-grey-light hover:text-white transition">Services</a></li>
+                        <li><a href="shop.html" class="text-grey-light hover:text-white transition">Shop</a></li>
+                        <li><a href="contact.html" class="text-grey-light hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Shop Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Favours</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Stationery</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Signage</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Accessories</a></li>
+                        <li><a href="#" class="text-grey-light hover:text-white transition">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gold">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-gold mt-1 mr-2"></i>
+                            <span class="text-grey-light">+27 12 345 6789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-gold mt-1 mr-2"></i>
+                            <span class="text-grey-light">info@ntobemcreations.co.za</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-grey pt-8 mt-8 text-center text-grey-light">
+                <p>&copy; 2023 Ntobem Creations. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
